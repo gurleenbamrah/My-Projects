@@ -1,0 +1,9 @@
+agent: NA
+Details: First I joined the tweets table with the retweets table so I can find which of the tweets 
+have been retweeted by using the writer. Then I joined the follows table with the previous table to 
+find out if the retweeter is a follower of the person who made the tweet. Then I had to make sure that
+we're looking at the same tweet in both the tweets table and the retweets table then I also had to make
+sure if the the retweeter is following the person who wrote the tweet. Then I use COUNT() to see how 
+many users actually retweeted the tweet. then check that the results only include the tweets, retweeted 
+by at least 3 different followers. So the last statement only shows the tweets that have been retweeted 
+by at least 3 of the tweet writers followers.  

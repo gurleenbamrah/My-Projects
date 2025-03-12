@@ -1,0 +1,24 @@
+agent: 
+ChatGPT, OpenAI. "Why is my query not working". query that i gave chatgpt to check:
+SELECT l.owner, l.lname, COUNT(*) AS total_tweets, COUNT(r.retweeter) AS retweeted_tweets
+FROM lists l
+JOIN includes i ON l.owner = i.owner AND l.lname = i.lname
+JOIN tweets t ON i.writer = t.writer AND i.tdate = t.tdate AND i.ttime = t.ttime
+JOIN retweets r ON t.writer = r.writer AND t.tdate = r.tdate AND t.ttime = r.ttime
+GROUP BY l.owner, l.lname
+HAVING COUNT(*) > 3 
+AND COUNT(r.retweeter) / COUNT(*) >= 0.5;
+
+Reply from Chatgpt was that I am using the JOIN incorrect, that I should use LEFT JOIN and said that my
+statement in AND is wrong because I'm calculating it wrong.
+
+Details: 
+After trying to finish the question without CTE, I failed and then tried it using CTE. I created 
+a table called ListTweet, in the table I counted the number of tweets and also counted how many tweets 
+have been retweeted. Then I joined the lists table with the includes table so then we only get the tweets
+included in a specific list. Then I joined includes table with the tweets table, so this table matches 
+the tweets based on who wrote the tweet and the date and time. The I left joined with the retweets table,
+so this finds out if each tweets have been retweeted by matching writer, date, time of the tweet. Outside
+the table I find out only the lists that have more than 3 tweets in the WHERE statement. In the AND 
+statement I check that the number of retweeted tweets is half or more of the total tweets. Like if there
+are 6 tweets in a list then at least 3 will be retweeted. 

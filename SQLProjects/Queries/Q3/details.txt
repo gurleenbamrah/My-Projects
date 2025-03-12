@@ -1,0 +1,5 @@
+agent: NA
+Details: Finds users who have posted at least 3 distinct tweets mentioning 'Edmonton' and I do this by 
+checking 3 tweets from the same user. and then checks if the things in the tweet are different 
+by text or the date it is posted. I used LOWER() again because this question also requires 
+case-insensitive. After all this I use EXCEPT for no followers requirement. 

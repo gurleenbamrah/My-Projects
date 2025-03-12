@@ -1,0 +1,6 @@
+agent: NA
+Details: Since the question asks for displaying at least one follower and at lease one tweet, 
+I had to join the follows table with the user table to find users with followers and 
+then join it with includes table because that table has information about the tweets 
+with writer and has information about the favourite lists. And need to include DISTINCT 
+so that we don't get duplicates. 

@@ -1,0 +1,35 @@
+agent: Asked ChatGPT, OpenAI. "Why is my query not working according to the question"
+The query I have:
+WITH counting_tweets AS (
+    SELECT strftime('%m', tdate) AS month_number, COUNT(*) - COUNT(replyto_w) AS tweet_count, COUNT(replyto_w) AS reply_count
+    FROM tweets
+    WHERE strftime('%Y', tdate) = '2024'
+    GROUP BY month_number
+),
+counting_retweets AS (
+    SELECT strftime('%m', rdate) AS month_number,COUNT(*) AS retweet_count 
+    FROM retweets
+    WHERE strftime('%Y', rdate) = '2024'
+    GROUP BY month_number
+)
+SELECT ct.month_number, ct.tweet_count, ct.reply_count, ct.retweet_count,(ct.tweet_count + ct.reply_count + cr.retweet_count) AS total
+FROM counting_tweets ct
+LEFT JOIN counting_retweets cr ON ct.month_number = cr.month_number
+ORDER BY ct.month_number;
+
+Reply from AI was that i needed to add COALESCE() to my query and that is why my query wasn't passing the
+tests on Github, after adding it my query passed the test. 
+
+Details:
+First I made a CTE for counting tweets by first getting the month from the tweets table. Then counting
+all rows and count rows where replyto_w is not null and then get the difference for that which gives 
+replyto_w where it is null. I also counted the rows where replyto_w is not null giving us tweets that are
+replies. then filter for the year 2024 and group by month. The second CTE is started by getting the month
+from retweets table and then counting the number of retweets each month. Then filtering for year 2024 and 
+group by month. then outside the CTE everything that the question wants printed is stated in the SELECT 
+statement. I orginally had something different for this statement because I did not know what COALESCE()
+was , so I went to of the attached link given to us in question 2 to learn about it to add to the query.
+This function makes sure that if there is no retweet data for a given month, it returns 0 instead of 
+NULL. So total calculates the total activity for the month by adding tweet cound, reply count and retweet
+but using COALESCE() for retweet. Then I left join to make sure that months without retweets are included
+and everything is ordered by month. 

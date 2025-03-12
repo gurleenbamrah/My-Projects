@@ -1,0 +1,6 @@
+agent: ChatGPT OpenAI. My prompt: "How do I use case insensitive in SQL", I added LOWER() to my sql to complete the requirement
+Details: The first join statement joins the follows table with the users table so we can match the follower's user information. 
+The second join checks if same followees is in both tables and that both followers and following the same user (u2). The third join, 
+joins the second table to identify the second follower (John Doe). Used LOWER() to complete the requirement for case insensitive part 
+of the question. the WHERE and last AND statement checks that user has followed u2 for at least 90 days and john dow has followed u2 
+for less than 90 days.   

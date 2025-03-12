@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.trojan0project.organizerUnitTests.organizer3EventDetailsActivityOrganizer" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-12-02T17:33:00" hostname="Gurleens-MacBook-Pro-3.local" time="2.101">
+  <properties/>
+  <testcase name="testViewPeopleButtonClick" classname="com.example.trojan0project.organizerUnitTests.organizer3EventDetailsActivityOrganizer" time="2.098"/>
+  <testcase name="testChangePosterButtonClick" classname="com.example.trojan0project.organizerUnitTests.organizer3EventDetailsActivityOrganizer" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

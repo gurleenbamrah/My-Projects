@@ -1,0 +1,52 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_organizer_signup_layout"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- App Logo (Optional) -->
+    <TextView
+        android:id="@+id/app_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TROJANO"
+        android:fontFamily="@font/cinzel_decorative"
+        android:textSize="24sp"
+        android:textColor="#8A2BE2"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <!-- Organizer Sign-Up Heading -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Organizer Sign Up"
+        android:fontFamily="@font/quicksand"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Facility Input Field -->
+    <EditText
+        android:id="@+id/facility_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Facility"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Sign-Up Button -->
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/purple"
+        android:text="Sign up" />
+
+</LinearLayout>

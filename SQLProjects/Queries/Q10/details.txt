@@ -1,0 +1,8 @@
+agent: NA
+Details: 
+First I joined follows and users tables and this gives us a list of all users who are followed by other. Then I used HAVING to
+filter the results to include only those users who have the max number of followers. The subquery finds the amx follower count.
+Then the second bit of the query uses HAVING to filter to include only those writers whose average number of retweets matches 
+the maximum average retweets count. Then the subquery in this finds the maximum average retweet count. Both the querys are 
+combined by a UNION statment to make the final query. The query outputs user who is the top in followers and also user who is 
+top in retweets. 

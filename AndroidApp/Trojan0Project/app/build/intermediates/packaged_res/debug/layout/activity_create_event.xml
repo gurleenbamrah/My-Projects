@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/logoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cinzel_decorative"
+        android:text="TROJAN0"
+        android:textColor="#8C52FF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp" />
+
+    <!-- Screen Title -->
+    <TextView
+        android:id="@+id/createEventTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Create Event"
+        android:textColor="@color/black"
+        android:fontFamily="@font/quicksand"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoText" />
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/leave_create_event_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="My App Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/createEventTitle" />
+
+    <!-- Event Name Input -->
+    <EditText
+        android:id="@+id/eventNameInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#b391f8"
+        android:hint="Event Name"
+        android:textColorHint="#b391f8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createEventTitle"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- Geolocation Label and Switch -->
+    <TextView
+        android:id="@+id/geolocationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Geolocation"
+        android:fontFamily="@font/quicksand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventNameInput"
+        android:layout_marginLeft="32dp" />  <!-- Changed to layout_marginLeft for compatibility -->
+
+    <Switch
+        android:id="@+id/geolocationSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@id/geolocationLabel"
+        app:layout_constraintTop_toBottomOf="@id/eventNameInput" />
+    <!-- Add Poster Button and Save Button -->
+    <Button
+        android:id="@+id/addPosterButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#b391f8"
+        android:text="Add Poster"
+        android:textColor="@color/white"
+        android:fontFamily="@font/quicksand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/saveButton"
+        app:layout_constraintTop_toBottomOf="@id/geolocationSwitch"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#b391f8"
+        android:text="Save Event"
+        android:textColor="@color/white"
+        android:fontFamily="@font/quicksand"
+        app:layout_constraintStart_toEndOf="@id/addPosterButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/geolocationSwitch"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <!-- Add Time and Add Description Buttons -->
+    <Button
+        android:id="@+id/addTimeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#b391f8"
+        android:text="Add Time"
+        android:textColor="@color/white"
+        android:fontFamily="@font/quicksand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/addDescriptionButton"
+        app:layout_constraintTop_toBottomOf="@id/addPosterButton"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/addDescriptionButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#b391f8"
+        android:text="Add Description"
+        android:textColor="@color/white"
+        android:fontFamily="@font/quicksand"
+        app:layout_constraintStart_toEndOf="@id/addTimeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addPosterButton"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <!-- Add Deadline and Add Max Entrants Buttons -->
+    <Button
+        android:id="@+id/addDeadlineButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#b391f8"
+        android:text="Add Deadline"
+        android:textColor="@color/white"
+        android:fontFamily="@font/quicksand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/addMaxEntrantsButton"
+        app:layout_constraintTop_toBottomOf="@id/addDescriptionButton"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/addMaxEntrantsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#b391f8"
+        android:text="Add Max Entrants"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:fontFamily="@font/quicksand"
+        app:layout_constraintStart_toEndOf="@id/addDeadlineButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addDescriptionButton"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <!-- QR Code Display -->
+    <ImageView
+        android:id="@+id/qrCodeImageView"
+        android:layout_width="148dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="QR Code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addMaxEntrantsButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

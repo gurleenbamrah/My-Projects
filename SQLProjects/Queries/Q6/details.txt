@@ -1,0 +1,18 @@
+agent: ChatGPT, OpenAI. "How to use rank() in sql". Also asked why my query wasn't working:
+SELECT t.writer, t.tdate, t.ttime, t.text, RANK() OVER (ORDER BY COUNT(r.retweeter) DESC) AS ranking
+FROM tweets t
+JOIN retweets r ON t.writer = r.writer 
+AND t.tdate = r.tdate 
+AND t.ttime = r.ttime
+GROUP BY t.writer, t.tdate, t.ttime, t.text
+WHERE ranking <= 3;
+Reply from AI to fix this was to add it as a subquery because we need rank() to be calculted
+first before WHERE and right now the contents in WHERE is calculated before SELECT so the query 
+is not getting solved and rank() is not being used correctly. 
+
+Details: The subquery in the sql, I first joined the tweets with their matching retweets by the writer 
+and then with the dates and times to match the tweets with the retweets. it basically just checks how many 
+people retweeted each tweet based on finding out who tweeted it and when. then I implement the rank() function 
+which ranks the tweet based on how many retweets they have (using COUNT()) and if 2 retweets are given the same 
+number then they're given same rank, thats why using rank is helpful for ties. then the outer query only selects 
+the top 3 tweets or more because of ties. 

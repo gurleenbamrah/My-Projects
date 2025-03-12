@@ -1,0 +1,6 @@
+agent: NA
+Details: First I had to left join tweets table and users table to check if a user has 
+written any tweets and then only include users who have no tweets then in the subquery, 
+the first part finds all the users that John Doe follows. the second part with the except 
+takes out the users that the current user doesn't follow. and I also used LOWER() again 
+because the question says case-insensitive. 

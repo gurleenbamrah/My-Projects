@@ -1,0 +1,8 @@
+agent: NA
+Details:
+I added small subqueries in the SELECT statement to meet the requirements for the question. Like 
+calculating the number of replies to the current tweet and the WHERE statement checks if other 
+tweets in the table reference this tweet. Then the second subquery is used to count how many times 
+the tweet has been retweeted by checking the retweets table. The last subquery is used to count how
+many other tweets mention the same hashtag as the current tweet, it does this by checking mention_has 
+in tweets table and checks that hashtag is not NULL. 

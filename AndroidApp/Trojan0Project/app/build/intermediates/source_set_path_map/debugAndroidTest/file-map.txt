@@ -1,0 +1,6 @@
+com.example.trojan0project.test.app-annotation-experimental-1.4.1-0 /Users/gurleenbamrah/.gradle/caches/8.9/transforms/53780f92503b1226b4717b725f9cf110/transformed/annotation-experimental-1.4.1/res
+com.example.trojan0project.test.app-core-1.6.1-1 /Users/gurleenbamrah/.gradle/caches/8.9/transforms/891a751dc872e3900ff46e5a017ac4c4/transformed/core-1.6.1/res
+com.example.trojan0project.test.app-androidTest-2 /Users/gurleenbamrah/Desktop/trojan0_horse/Trojan0Project/app/build/generated/res/resValues/androidTest/debug
+com.example.trojan0project.test.app-mergeDebugAndroidTestResources-3 /Users/gurleenbamrah/Desktop/trojan0_horse/Trojan0Project/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.example.trojan0project.test.app-mergeDebugAndroidTestResources-4 /Users/gurleenbamrah/Desktop/trojan0_horse/Trojan0Project/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.example.trojan0project.test.app-merged_res-5 /Users/gurleenbamrah/Desktop/trojan0_horse/Trojan0Project/app/build/intermediates/merged_res/debugAndroidTest
