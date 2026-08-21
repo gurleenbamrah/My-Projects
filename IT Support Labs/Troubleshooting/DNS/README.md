@@ -132,16 +132,17 @@ And after applying the corrected DNS configuration, I repeated the diagnostic te
 
 ### Verify DNS Resolution 
 I first ran:
-'''cmd 
+```cmd 
 nslookup google.com
-'''
+```
 The DNS server successfully returned an IP address for google.com
 <img width="516" height="132" alt="Screenshot 2026-08-21 at 1 22 55 PM" src="https://github.com/user-attachments/assets/e69f8f7f-481e-4c43-b4e3-154649e24b49" />
 
 ### Verify Domain Connectivity 
 I then ran:
-'''cmd 
+```cmd 
 ping google.com
+```
 The domain successfully resolved and the VM was able to communicate with the resulting IP address. 
 <img width="512" height="157" alt="Screenshot 2026-08-21 at 1 24 05 PM" src="https://github.com/user-attachments/assets/c9d4da4b-3c4e-4288-8d0f-8c69d954d95e" />
 
@@ -150,11 +151,11 @@ The DNS issue was successfully resolved.
 The final tests demonstrated :
 
 
-'''text
+```text
 Network connectivity     ✓
 DNS resolution           ✓
 Domain name connectivity ✓
-'''
+```
 
 
 
