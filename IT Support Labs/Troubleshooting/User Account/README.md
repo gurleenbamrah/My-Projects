@@ -33,8 +33,11 @@ The `jsmith` account was configured as a **Standard User** rather than an admini
 
 This better represent a typical employee account and follows the principle of least privilege. 
 **Adding the test user**
+
 <img width="509" height="440" alt="Screenshot 2026-08-15 at 4 28 45 PM" src="https://github.com/user-attachments/assets/c2d1ef7c-cf38-4dc0-b22f-2c61686b5210" />
+
 **jsmith configured as a Standard User**
+
 <img width="515" height="441" alt="Screenshot 2026-08-15 at 4 30 57 PM" src="https://github.com/user-attachments/assets/7e7dd1cf-acb3-402c-93d5-4ad5302b35de" />
 
 ---
