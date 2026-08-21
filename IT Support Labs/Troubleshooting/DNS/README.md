@@ -24,19 +24,22 @@ Before troubleshooting the simulated DNS issue, I established the system's curre
 The 'hostname' command was used to identify the name assigned to the Windows virtual machine.
 
 ```cmd
-hostname ```
+hostname
+```
 
 ### Logged-in User 
 The 'whoami' command was used to identify the account currently logged into the system.
 
-'''cmd
+```cmd
 whoami
+```
 
 ### IP Configuration 
 The 'ipconfig' command was used to review the VM's IP configuration and determine how the system was connected to the network 
 
-'''cmd
+```cmd
 ipconfig
+```
 
 <img width="511" height="354" alt="Screenshot 2026-08-15 at 3 40 30 PM" src="https://github.com/user-attachments/assets/d8cd570e-ff1a-49c2-bf67-1dc6bd88a05b" />
 
@@ -47,15 +50,17 @@ Before creating the DNS failure, I tested the VM's ability to communicate with a
 
 ### Test External IP Connectivity 
 I used:
-'''cmd
+```cmd
 ping 8.8.8.8
+```
 
 A successful response demonstrated that the VM could communicate with an external IP address
 
 ### Test Domain Connectivity 
 I then used:
-'''cmd
+```cmd
 ping google.com
+```
 
 This test verified both domain name resolution and connectivity to the resolved IP address.
 
@@ -65,8 +70,10 @@ This test verified both domain name resolution and connectivity to the resolved 
 At this point, the VM had working network connectivity and DNS resolution 
 
 ## 3. Create the DNS Troubleshooting Scenario 
-To simulate a realistic IT support issue, I intentiallu changed the VM's DNS server configuration to a invalid DNS address:
+To simulate a realistic IT support issue, I intentionally changed the VM's DNS server configuration to a invalid DNS address:
+```
 192.9.2.1
+```
 
 This was done to create a situation where the VM could still communicate with external IP addresses but could no longer resolve domain names 
 
@@ -74,16 +81,18 @@ This was done to create a situation where the VM could still communicate with ex
 
 ### Test IP connectivity 
 I first tested the external IP address again:
-'''cmd
+```cmd
 ping 8.8.8.8
+```
 
 The VM was still able to communicate with the external IP address.
 This shows that general network connectivity was still functioning 
 
 ### Test Domain Resolution 
 I then tested:
-'''cmd
+```cmd
 ping google.com
+```
 
 The request failed because the system could not resolve google.com to an IP address.
 
@@ -98,8 +107,9 @@ This indicated that the issue was related to DNS configuration rather than the V
 
 ## Diagnose the DNS failure 
 To investigate the DNS problem further, I used the nslookup command:
-'''cmd
+```cmd
 nslookup google.com
+```
 
 nslookup queries the configured DNS server to determine the IP address associated with a domain name.
 
@@ -110,7 +120,7 @@ The results showed that the VM was unable to successfully resolve the domain usi
 ### Diagnosis 
 The root cause was an incorrect DNS server configuration.
 
-Th etorubleshooting results showed:
+Th troubleshooting results showed:
 ping 8.8.8.8
 -> Successful 
 ping google.com
@@ -122,7 +132,9 @@ This isolated the issue from general network connectivity to DNS resolution.
 
 ## 6. Correct the DNS Configuration 
 To resolve the issue, I changed the VM's DNS server configuration to:
+```
 8.8.8.8
+```
 
 8.8.8.8 is a public DNS resolver operated by Google.
 
