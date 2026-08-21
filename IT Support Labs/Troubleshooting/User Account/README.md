@@ -59,7 +59,6 @@ This simulated a situation where a user is unable to log in because their accoun
  I then attempted to reproduce the user's login problem.
  I signed out of the ITAdmin account and attempted to log in as jsmith.
 
-
  The `jsmith` account was not available as expected, so I continued the investigation using Command Prompt.
  
  I used:
@@ -68,7 +67,9 @@ This simulated a situation where a user is unable to log in because their accoun
 net user jsmith
 ```
 The command displayed the current configuration and status of the account.
-Screenshot 2026-08-15 at 4.49.07 PM
+
+<img width="494" height="304" alt="Screenshot 2026-08-15 at 4 49 07 PM" src="https://github.com/user-attachments/assets/72d169a9-0a79-41b4-8a9a-873fa26e35cc" />
+
  
  The output showed:
 
@@ -79,6 +80,85 @@ Account active               No
 This confirmed that the account was currently disabled.
 
 ---
+
+## 4. Diagnose the Problem
+
+The investigation showed that the computer itself was not necessarily the problem. The issue was with the status of the user's local account.
+
+Using:
+
+```cmd
+net user jsmith
+```
+
+I confirmed that:
+
+```text
+Account active               No
+```
+
+
+### Diagnosis
+The `jsmith` account was disabled, preventing the user from logging in.
+This narrowed the problem down to the local user account rather than the computer's general functionality.
+
+---
+
+## 5. Fix the Account
+I re-enabled the `jsmith` account using:
+
+```cmd
+net user jsmith /active:yes
+```
+
+The `/active:yes` parameter changes the account status back to active.
+<img width="493" height="77" alt="Screenshot 2026-08-15 at 4 53 00 PM" src="https://github.com/user-attachments/assets/958d9378-2e52-4a9c-9d40-d91a596910f7" />
+
+---
+
+## 6. Verify the Fix 
+After re-enabling the account, I verified the account status using:
+
+```cmd
+net user jsmith
+```
+
+The output showed:
+
+```text
+Account active               Yes
+```
+
+This confirmed that the account was active again and should now be able to authenticate.
+<img width="489" height="299" alt="Screenshot 2026-08-15 at 4 54 32 PM" src="https://github.com/user-attachments/assets/d7c21939-ef66-45d2-be5b-7fb6d4a56849" />
+
+---
+
+## Final Result
+
+The simulated login issue was successfully diagnosed and resolved.
+
+**Problem:** User account was disabled  
+**Cause:** `jsmith` had been set to inactive  
+**Fix:** Re-enabled the account using `net user jsmith /active:yes`  
+**Verification:** `Account active` changed from `No` to `Yes`
+
+---
+
+## Skills Demonstrated
+
+- Windows user account management
+- Local account troubleshooting
+- Command Prompt
+- `net user`
+- Account status verification
+- User privilege configuration
+- Problem diagnosis
+- Troubleshooting methodology
+- Principle of least privilege
+
+
+
 
 
 
