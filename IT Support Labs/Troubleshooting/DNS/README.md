@@ -123,12 +123,14 @@ The results showed that the VM was unable to successfully resolve the domain usi
 The root cause was an incorrect DNS server configuration.
 
 Th troubleshooting results showed:
+```
 ping 8.8.8.8
 -> Successful 
 ping google.com
 -> Failed 
 nslookup google.com
--> Failed 
+-> Failed
+```
 
 This isolated the issue from general network connectivity to DNS resolution.
 
