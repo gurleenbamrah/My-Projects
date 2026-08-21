@@ -58,8 +58,7 @@ This simulated a situation where a user is unable to log in because their accoun
  ## 3. Test the User Login 
  I then attempted to reproduce the user's login problem.
  I signed out of the ITAdmin account and attempted to log in as jsmith.
- 
- <img width="516" height="439" alt="Screenshot 2026-08-15 at 4 39 49 PM" src="https://github.com/user-attachments/assets/98be597e-66c3-40b2-8004-741f82503d8d" />
+
 
  The `jsmith` account was not available as expected, so I continued the investigation using Command Prompt.
  
@@ -69,8 +68,7 @@ This simulated a situation where a user is unable to log in because their accoun
 net user jsmith
 ```
 The command displayed the current configuration and status of the account.
-
- <img width="520" height="438" alt="Screenshot 2026-08-15 at 4 55 32 PM" src="https://github.com/user-attachments/assets/0820f01d-c16b-4fc9-a5cd-6ecf0880829b" />
+Screenshot 2026-08-15 at 4.49.07 PM
  
  The output showed:
 
