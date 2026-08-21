@@ -41,3 +41,29 @@ This is an important troubleshooting approach:
 The initial performance check did not show evidence of a major CPU, memory, disk, or network bottleneck.
 
 ---
+## 2. Investigate Running Processes
+
+I then reviewed the running processes in Task Manager and sorted them by CPU usage from highest to lowest.
+
+The purpose was to determine whether a specific application or process was consuming an unusually large amount of CPU resources.
+
+<img width="512" height="443" alt="Screenshot 2026-08-15 at 5 10 42 PM" src="https://github.com/user-attachments/assets/752063cd-a73d-49c2-bee7-44eb106c572d" />
+
+At this stage, there was no obvious process causing a significant performance issue.
+
+---
+
+## 3. Investigate Memory Usage
+
+I also reviewed the system's memory usage.
+
+A percentage by itself does not necessarily indicate a problem. For example, seeing 65% memory usage would need to be considered in relation to how much RAM the computer actually has.
+
+This reinforced the importance of looking at the available system resources rather than assuming that a percentage automatically indicates a problem.
+
+At this point, there was no evidence that CPU, memory, or disk usage was causing a major performance problem.
+
+> **In IT support, troubleshooting can involve ruling out potential causes rather than immediately finding a problem.**
+
+<img width="511" height="438" alt="Screenshot 2026-08-15 at 5 14 10 PM" src="https://github.com/user-attachments/assets/20d2be2c-07df-49d0-9516-8414cac31b9d" />
+
