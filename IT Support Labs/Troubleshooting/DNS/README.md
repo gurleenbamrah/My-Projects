@@ -101,7 +101,9 @@ The request failed because the system could not resolve google.com to an IP addr
 
 ### Initial Diagnosis 
 The results narrowed the problem down significantly:
+```
 IP connectivity was working, but DNS name resolution was failing.
+```
 
 This indicated that the issue was related to DNS configuration rather than the VM's general network connection. 
 
