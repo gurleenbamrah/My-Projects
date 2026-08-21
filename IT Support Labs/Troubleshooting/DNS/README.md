@@ -173,5 +173,19 @@ DNS resolution           ✓
 Domain name connectivity ✓
 ```
 
+## Skills Demonstrated 
+
+- DNS troubleshooting
+- Network troubleshooting
+- Windows command-line doagnostics
+- ipconfig
+- ping
+- nslookup
+- DNS configuration
+- Problem isolation
+- Root-cause identification
+- Troubleshooting methodology
+- Verification and validation 
+
 
 
