@@ -32,6 +32,7 @@ I selected **"I don't have this person's sign-in information"** and created the 
 The `jsmith` account was configured as a **Standard User** rather than an administrator.
 
 This better represent a typical employee account and follows the principle of least privilege. 
+
 **Adding the test user**
 
 <img width="509" height="440" alt="Screenshot 2026-08-15 at 4 28 45 PM" src="https://github.com/user-attachments/assets/c2d1ef7c-cf38-4dc0-b22f-2c61686b5210" />
