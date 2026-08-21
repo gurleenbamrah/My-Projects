@@ -148,6 +148,8 @@ The domain successfully resolved and the VM was able to communicate with the res
 ## 8. Final result
 The DNS issue was successfully resolved.
 The final tests demonstrated :
+
+
 '''text
 Network connectivity     ✓
 DNS resolution           ✓
