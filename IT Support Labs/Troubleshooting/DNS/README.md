@@ -23,8 +23,8 @@ Before troubleshooting the simulated DNS issue, I established the system's curre
 ### Hostname
 The 'hostname' command was used to identify the name assigned to the Windows virtual machine.
 
-'''cmd
-hostname
+```cmd
+hostname ```
 
 ### Logged-in User 
 The 'whoami' command was used to identify the account currently logged into the system.
