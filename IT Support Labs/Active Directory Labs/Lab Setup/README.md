@@ -42,6 +42,7 @@ AD-SERVER
 I used the `Add Roles and Features Wizard` in Server Manager to install the `Active Directory Domain Services (AD DS)` role.
 
 AD DS provides centralized management of users, computers, groups, authentication, and security policies within a Windows domain.
+
 <img width="511" height="438" alt="Screenshot 2026-08-15 at 8 57 40 PM" src="https://github.com/user-attachments/assets/4fabccbe-ae56-49fb-b1bf-1f2f099b3f70" />
 
 # 4. Create the Active Directory Domain
@@ -50,9 +51,13 @@ I created the Active Directory domain:
 The Windows Server was configured as the domain controller for this domain.
 
 The domain provides a centralized environment for managing users, groups, computers, authentication, and security policies.
+
 <img width="510" height="438" alt="Screenshot 2026-08-15 at 9 09 56 PM" src="https://github.com/user-attachments/assets/6d0b33cd-74f5-4916-8177-fbe6461dbe14" />
+
 <img width="507" height="434" alt="Screenshot 2026-08-15 at 9 14 16 PM" src="https://github.com/user-attachments/assets/dcd4d429-169e-4899-b48e-729b4bb02648" />
+
 <img width="508" height="433" alt="Screenshot 2026-08-15 at 9 36 26 PM" src="https://github.com/user-attachments/assets/44351607-ba88-4dcb-a59b-70bd2678b25e" />
+
 
 # 5. Create the IT User
 I created a domain user account to simulate managing an employee through Active Directory.
@@ -61,6 +66,7 @@ The account created for the lab was:
 The user was placed within the appropriate IT organizational structure.
 
 <img width="508" height="430" alt="Screenshot 2026-08-15 at 9 48 28 PM" src="https://github.com/user-attachments/assets/00e6da10-fceb-4f4b-8594-4a01b6006e70" />
+
 
 # 6. Create the IT Staff Security Group
 I created an IT Staff security group and added the IT user to the group.
